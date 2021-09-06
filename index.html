@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <title>KADOMI PERFUME</title>
-    <link rel="stylesheet" href="css/main.css?v=1.0.1">
+    <link rel="stylesheet" href="css/main.css"  id="css-main">
 </head>
 <body>
     <div class="wrapper">
@@ -21,7 +21,7 @@
             <section id="questionnaire">
                 <h1>בחירת שאלון התאמה</h1>
                 <div class="page-questionnaire--inner">
-                    <a class="questionnaire__button btn" href="gender.html" target="">
+                    <a class="questionnaire__button btn" href="main-questionnaire.html" target="">
                         <div class="questionnaire__button-title">שאלון אישי</div>
                         <div class="questionnaire__button-info">
                             התאם את כרטיס הביקור 
@@ -29,16 +29,16 @@
                             האישי שלך
                         </div>
                     </a>
-                    <a class="questionnaire__button btn" href="#" target="">
-                        <div class="questionnaire__button-title">שאלון אישי</div>
+                    <a class="questionnaire__button btn" href="scent-families.html" target="">
+                        <div class="questionnaire__button-title">משפחות ריח</div>
                         <div class="questionnaire__button-info">
                             התאם את כרטיס הביקור 
                             <br>
                             האישי שלך
                         </div>
                     </a>
-                    <a class="questionnaire__button btn" href="#" target="">
-                        <div class="questionnaire__button-title">שאלון אישי</div>
+                    <a class="questionnaire__button btn" href="brand.html" target="">
+                        <div class="questionnaire__button-title">מותג</div>
                         <div class="questionnaire__button-info">
                             התאם את כרטיס הביקור 
                             <br>
@@ -51,5 +51,10 @@
         </main>
     </div>
     <script src="//cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        //css
+        let resourcePath1 = 'css/main.css';
+        document.getElementById('css-main').href = resourcePath1 + '?v=' + Date.now();
+    </script>
 </body>
 </html>

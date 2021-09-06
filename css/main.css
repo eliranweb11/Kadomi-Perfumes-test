@@ -309,6 +309,29 @@ footer.footer-scent-families .btn-results {
 .kadomi-perfumes-component__button-warm {
   background-image: url("../img/bg-warm.jpg");
 }
+.kadomi-perfumes-component__more-results {
+  display: flex;
+  justify-content: center;
+  margin: 23px 0 63px;
+  gap: 23px;
+  align-items: center;
+}
+.kadomi-perfumes-component__more-results-text {
+  font-size: 45px;
+  color: #D7BD62;
+  font-weight: 400;
+}
+.kadomi-perfumes-component__more-results .btn-more-results {
+  background-color: #9B1F3B;
+  width: 229px;
+  height: 63px;
+  font-size: 25px;
+  line-height: 25px;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 #situation .kadomi-perfumes-component__button, #style .kadomi-perfumes-component__button, #weather .kadomi-perfumes-component__button {
   height: 303px;
@@ -367,6 +390,65 @@ footer.footer-scent-families .btn-results {
   align-items: center;
   justify-content: center;
   border-left: 1px solid rgba(215, 189, 98, 0.41);
+}
+.kadomi-perfumes-component__box-personal-results {
+  background: url("../img/bg-brand.jpg") no-repeat;
+  background-size: contain;
+  width: 926px;
+  height: 302px;
+  margin: 0 auto;
+  border: 0;
+  color: #fff;
+  display: flex;
+}
+.kadomi-perfumes-component__box-personal-results-content {
+  font-size: 35px;
+  line-height: 35px;
+  padding: 33px 39px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.kadomi-perfumes-component__box-personal-results-content__text {
+  padding-right: 4px;
+}
+.kadomi-perfumes-component__box-personal-results-content__text-title {
+  font-size: 50px;
+  line-height: 59px;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+.kadomi-perfumes-component__box-personal-results-content__show_more {
+  width: 149px;
+  height: 46px;
+  background-color: #000;
+  margin: 37px 0 19px;
+  text-align: center;
+}
+.kadomi-perfumes-component__box-personal-results-content__show_more a {
+  font-size: 30px;
+  color: #D7BD62;
+  line-height: 46px;
+}
+.kadomi-perfumes-component__box-personal-results-img {
+  min-width: 223px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(215, 189, 98, 0.41);
+  position: relative;
+}
+.kadomi-perfumes-component__box-personal-results-img__number {
+  width: 39px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  right: 12px;
+  top: 18px;
 }
 
 /* Blocks styling */
@@ -584,4 +666,52 @@ footer.footer-scent-families .btn-results {
 .scent-families .inputGroup .kadomi-perfumes-component__button-topic-info {
   line-height: 40px;
   margin-top: -2px;
+}
+
+.personal-results {
+  margin: 2px 0 0;
+}
+.personal-results-text {
+  min-height: 79px;
+}
+.personal-results-text-read_more {
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+.personal-results-text-read_more a {
+  font-size: 23px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  font-weight: 900;
+}
+.personal-results-topic {
+  color: #D7BD62;
+  font-weight: 400;
+}
+.personal-results h1 {
+  font-size: 45px;
+  line-height: 46px;
+  text-align: right;
+  font-weight: 700;
+}
+.personal-results h2 {
+  margin: 14px 0 0;
+}
+.personal-results .page-quiz--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 39px 0 0;
+  gap: 32px;
+}
+.personal-results .page-quiz--inner-personal-results {
+  margin: 6px 0 0;
+}
+.personal-results .main-questionnaire__button {
+  background: url("../img/bg-button.png") no-repeat;
+  background-size: contain;
+  width: 638px;
+  height: 166px;
+  margin: 0 auto;
+  border: 0;
 }

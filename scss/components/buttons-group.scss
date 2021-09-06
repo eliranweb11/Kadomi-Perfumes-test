@@ -64,6 +64,30 @@
             background-image: url("../img/bg-warm.jpg");
         }
     }
+    //More results
+    &__more-results{
+        display: flex;
+        justify-content: center;
+        margin: 23px 0 63px;
+        gap: 23px;
+        align-items: center;
+        &-text{
+            font-size: 45px;
+            color:$primary;
+            font-weight:400;
+        }
+        .btn-more-results{
+            background-color:$maroon;
+            width: 229px;
+            height: 63px;
+            font-size: 25px;
+            line-height: 25px;
+            text-decoration: underline;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 #situation,#style,#weather{
     .kadomi-perfumes-component__button{

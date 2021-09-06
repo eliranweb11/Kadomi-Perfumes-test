@@ -67,14 +67,15 @@ a:hover {
 
 .wrapper {
   width: 992px;
-  margin: 20px 10px;
+  margin: 20px auto;
   display: block;
+  background: url("../img/bg.jpg") no-repeat;
   background-size: contain;
   width: 100%;
   max-width: 992px;
   height: 1440px;
-  border: solid 1px palevioletred;
   overflow: hidden;
+  display: block;
   position: relative;
   box-sizing: border-box;
 }

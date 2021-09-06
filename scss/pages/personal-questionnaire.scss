@@ -1,0 +1,62 @@
+.personal-questionnaire{
+    .questions-wrapper{
+        .question-item {
+            display:none;
+            &:first-child{
+                display:block;
+            }
+        }
+    }
+    //font
+    &-text{
+        min-height: 79px;
+        &-read_more{
+            margin-top: 35px;
+            margin-bottom: 80px;
+            a{
+                font-size: 23px;
+                line-height: 100%;
+                text-decoration-line: underline;
+                font-weight: 900;
+            }
+        }
+    }
+    &-topic{
+       color:$primary; 
+       font-weight: 400;
+    }
+    h1{
+        font-size: 45px;
+        line-height: 46px;
+        text-align:right;
+        font-weight: 700;
+    }
+    h2{
+        margin: 14px 0 0;
+    }
+    
+    .page{
+        &-quiz{
+            &--inner{
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                margin:39px 0 0;
+                gap: 32px;
+                
+            }
+        }
+    }
+    .main-questionnaire{
+        &__button{
+            background:url("../img/bg-button.png") no-repeat;
+            background-size:contain;
+            width:638px;
+            height:166px;
+            margin: 0 auto;
+            border: 0;
+            // color:$white;
+
+        }
+    }
+}

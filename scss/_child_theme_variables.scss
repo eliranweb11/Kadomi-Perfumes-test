@@ -1,0 +1,106 @@
+// Fonts
+$main-font: 'asimon', sans-serif;
+// Colors
+$primary: #D7BD62;
+// $primary-dark: #501693;
+// $primary-dark-2:#6C04D5;
+// $secondary: #37474F;
+// $text: #37474F;
+
+$white: #fff;
+$black: #000;
+// $white-2:#FDFCFF;
+// $black: #000;
+// $purpure: #C8C6E9;
+
+// $brand-blue: #7B86C1;
+// $brand-peach: #FFE1DA;
+// $brand-ocean: #8ABDD9;
+
+// $brand-gray: #939FB4;
+// $brand-gray-2: #9E9E9E;
+// $brand-gray-3: #C4C4C4;
+// $brand-gray-4: #535256;
+
+// $brand-light-gray: #F5F8FF;
+// $brand-light-gray-2: #D0D6E1;
+// $brand-light-gray-3: #F2F5F8;
+
+// $brand-light-blue: #DDF3FF;
+// $brand-light-purple: #DAE0FF;
+
+// Gradients and Shadows
+$gradients: (
+    linear-gradient(285.32deg, #D7BD62 15.14%, #936F1D 83.8%)
+);
+
+$shadows: (
+    'feature-item': 5px 5px 0px 0px rgba(0, 0, 0, 0.06)
+);
+
+// Predefined Break-points
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@function translate-media-condition($c) {
+    $condMap: (
+      "screen": "only screen",
+      "print": "only print",
+      "retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+      ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
+      "<maxWidth": "(max-width: #{$mediaMaxWidth})", 		
+      ">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
+      "<bp1Width": "(max-width: #{$mediaBp1Width})",
+      ">minWidth": "(min-width: #{$mediaMinWidth + 1})",
+      "<minWidth": "(max-width: #{$mediaMinWidth})"
+    );
+    @return map-get( $condMap, $c );
+  }
+  
+  // The mdia mixin
+  @mixin media($args...) {
+    $query: "";
+    @each $arg in $args {
+      $op: "";
+      @if ( $query != "" ) {
+        $op: " and ";
+      }
+      $query: $query + $op + translate-media-condition($arg);
+    }
+    @media #{$query}  { @content; }
+  }
+
+  @mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
+
+
+  @font-face{
+	font-family: 'asimon';
+	font-weight: 400; /*(regular)*/
+	font-style: normal;
+	src: url('../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff2') format('woff2'),
+		url('../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff') format('woff');
+}
+@font-face{
+	font-family: 'asimon';
+	font-weight: 700; /*(bold)*/
+	font-style: normal;
+	src: url('../fonts/almoni-bold/webfont_files/almoni-bold-aaa.woff2') format('woff2'),
+		url('../fonts/almoni-bold/webfont_files/asimon-bold-aaa.woff') format('woff');
+}
+@font-face{
+	font-family: 'asimon';
+	font-weight: 900; /*(black)*/
+	font-style: normal;
+	src: url('../fonts/almoni-black/webfont_files/almoni-black-aaa.woff2') format('woff2'),
+		url('../fonts/almoni-black/webfont_files/asimon-black-aaa.woff') format('woff');
+}

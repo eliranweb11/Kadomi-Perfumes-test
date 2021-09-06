@@ -1,0 +1,586 @@
+/* Globals and Absctracts */
+@font-face {
+  font-family: "asimon";
+  font-weight: 400;
+  /*(regular)*/
+  font-style: normal;
+  src: url("../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff2") format("woff2"), url("../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff") format("woff");
+}
+@font-face {
+  font-family: "asimon";
+  font-weight: 700;
+  /*(bold)*/
+  font-style: normal;
+  src: url("../fonts/almoni-bold/webfont_files/almoni-bold-aaa.woff2") format("woff2"), url("../fonts/almoni-bold/webfont_files/asimon-bold-aaa.woff") format("woff");
+}
+@font-face {
+  font-family: "asimon";
+  font-weight: 900;
+  /*(black)*/
+  font-style: normal;
+  src: url("../fonts/almoni-black/webfont_files/almoni-black-aaa.woff2") format("woff2"), url("../fonts/almoni-black/webfont_files/asimon-black-aaa.woff") format("woff");
+}
+/* Reset==================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html, body {
+  font-family: "asimon", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #cfcfec;
+  color: #fff;
+  font-family: "asimon", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+}
+
+.wrapper {
+  width: 992px;
+  margin: 20px 10px;
+  display: block;
+  background-size: contain;
+  width: 100%;
+  max-width: 992px;
+  height: 1440px;
+  border: solid 1px palevioletred;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Titles and typography */
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 63px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 400;
+}
+
+.container {
+  padding: 0 32px;
+}
+
+/* #Forms - login
+================================================== */
+.login__form {
+  margin: 0 180px;
+}
+.login__form .form {
+  display: flex;
+  flex-direction: column;
+  margin: 76px 0 0;
+  gap: 40px;
+}
+.login__form .form input {
+  border: 1px solid #D7BD62;
+  background: transparent;
+  height: 158px;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+}
+.login__form .form .btn-login {
+  background: url("../img/bg-button.png") no-repeat;
+  background-size: contain;
+  width: 630px;
+  height: 158px;
+  margin: 0 auto;
+  border: 0;
+  color: #fff;
+}
+
+/* #header
+================================================== */
+header {
+  padding: 122px 0 102px;
+}
+header.header-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 39px 75px;
+}
+header.header-page .logo img {
+  margin: 0;
+}
+header .logo img {
+  margin: 0 auto;
+  display: block;
+}
+header #main-menu {
+  flex-direction: row;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+  padding: 0;
+  gap: 18px;
+}
+header #main-menu .menu-item .nav-link {
+  position: relative;
+  color: #fff;
+}
+header #main-menu .menu-item .nav-link:after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+header #main-menu .menu-item .nav-link.active, header #main-menu .menu-item .nav-link:hover {
+  color: #D7BD62;
+}
+header #main-menu .menu-item .nav-link.active:after, header #main-menu .menu-item .nav-link:hover:after {
+  display: none;
+}
+
+/* #header
+================================================== */
+footer.footer-scent-families {
+  height: 164px;
+  background: linear-gradient(285.32deg, #D7BD62 15.14%, #936F1D 83.8%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 990px;
+  z-index: 2;
+  display: flex;
+}
+footer.footer-scent-families .footer-scent-families-text {
+  font-size: 25px;
+  line-height: 26px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 13px 32px 0 0;
+}
+footer.footer-scent-families .footer-scent-families-number {
+  display: contents;
+}
+footer.footer-scent-families ul {
+  list-style: none;
+  display: flex;
+  margin: 17px 56px 0;
+  gap: 28px;
+}
+footer.footer-scent-families ul li {
+  width: 129px;
+  height: 129px;
+  border-radius: 50%;
+  background-color: #000;
+  font-size: 30px;
+  color: #D7BD62;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer.footer-scent-families ul li:before {
+  content: "";
+  background-image: url("../img/icons/arrow-right.png");
+  width: 21px;
+  height: 8px;
+  margin-right: -8px;
+}
+footer.footer-scent-families ul li:after {
+  content: "";
+  background-image: url("../img/icons/arrow-left.png");
+  width: 21px;
+  height: 8px;
+  margin-left: -8px;
+}
+footer.footer-scent-families .btn-results {
+  border: 1px solid rgba(215, 189, 98, 0.32);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+  background: #000;
+  color: #D7BD62;
+  position: absolute;
+  bottom: 33px;
+  width: 232px;
+  height: 232px;
+  left: -62px;
+  font-size: 40px;
+  line-height: 38px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  justify-content: right;
+  padding: 7px 26px 0 0;
+}
+
+/* Component styling */
+.kadomi-perfumes-component__buttons-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 41px;
+}
+.kadomi-perfumes-component__button {
+  width: 929px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.kadomi-perfumes-component__button-topic {
+  position: absolute;
+  right: 44px;
+  bottom: 27px;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #fff;
+}
+.kadomi-perfumes-component__button-topic-text {
+  position: relative;
+}
+.kadomi-perfumes-component__button-topic-info {
+  font-weight: 400;
+  font-size: 40px;
+}
+.kadomi-perfumes-component__button-wife {
+  background-image: url("../img/bg-wife.jpg");
+}
+.kadomi-perfumes-component__button-daily {
+  background-image: url("../img/bg-daily.jpg");
+}
+.kadomi-perfumes-component__button-calm {
+  background-image: url("../img/bg-calm.jpg");
+}
+.kadomi-perfumes-component__button-calm .kadomi-perfumes-component__button-topic {
+  bottom: 46px;
+}
+.kadomi-perfumes-component__button-calm .kadomi-perfumes-component__button-topic-text {
+  margin-bottom: -14px;
+}
+.kadomi-perfumes-component__button-horseman {
+  background-image: url("../img/bg-horseman.jpg");
+}
+.kadomi-perfumes-component__button-horseman .kadomi-perfumes-component__button-topic {
+  bottom: 46px;
+}
+.kadomi-perfumes-component__button-horseman .kadomi-perfumes-component__button-topic-text {
+  margin-bottom: -14px;
+}
+.kadomi-perfumes-component__button-cool {
+  background-image: url("../img/bg-cool.jpg");
+}
+.kadomi-perfumes-component__button-warm {
+  background-image: url("../img/bg-warm.jpg");
+}
+
+#situation .kadomi-perfumes-component__button, #style .kadomi-perfumes-component__button, #weather .kadomi-perfumes-component__button {
+  height: 303px;
+}
+
+#scent-families .kadomi-perfumes-component__button {
+  width: 926px;
+  height: 302px;
+}
+#scent-families .kadomi-perfumes-component__button-hadari {
+  background-image: url("../img/bg/bg-hadari.jpg");
+}
+
+/* === #form === */
+.kadomi-perfumes-component__box-group {
+  gap: 41px;
+  display: flex;
+  flex-direction: column;
+}
+.kadomi-perfumes-component__box-brand {
+  background: url("../img/bg-brand.jpg") no-repeat;
+  background-size: contain;
+  width: 926px;
+  height: 302px;
+  margin: 0 auto;
+  border: 0;
+  color: #fff;
+  display: flex;
+}
+.kadomi-perfumes-component__box-brand-content {
+  font-size: 35px;
+  line-height: 35px;
+  padding: 33px 61px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.kadomi-perfumes-component__box-brand-content__text {
+  padding-right: 4px;
+}
+.kadomi-perfumes-component__box-brand-content__show_more {
+  width: 149px;
+  height: 46px;
+  background-color: #000;
+  margin: 31px 0 19px;
+  text-align: center;
+}
+.kadomi-perfumes-component__box-brand-content__show_more a {
+  font-size: 30px;
+  color: #D7BD62;
+  line-height: 46px;
+}
+.kadomi-perfumes-component__box-brand-img {
+  min-width: 325px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(215, 189, 98, 0.41);
+}
+
+/* Blocks styling */
+/* Page Templates */
+#questionnaire .page-questionnaire--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 75px 0 0;
+  gap: 32px;
+}
+#questionnaire .questionnaire__button {
+  background: url("../img/bg-button.png") no-repeat;
+  background-size: contain;
+  width: 630px;
+  height: 158px;
+  margin: 0 auto;
+  border: 0;
+  color: #fff;
+}
+#questionnaire .questionnaire__button-title {
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 700;
+  padding: 23px 0 9px;
+  color: #fff;
+}
+#questionnaire .questionnaire__button-info {
+  font-size: 27px;
+  line-height: 27px;
+  color: #fff;
+}
+
+.personal-questionnaire .questions-wrapper .question-item {
+  display: none;
+}
+.personal-questionnaire .questions-wrapper .question-item:first-child {
+  display: block;
+}
+.personal-questionnaire-text {
+  min-height: 79px;
+}
+.personal-questionnaire-text-read_more {
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+.personal-questionnaire-text-read_more a {
+  font-size: 23px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  font-weight: 900;
+}
+.personal-questionnaire-topic {
+  color: #D7BD62;
+  font-weight: 400;
+}
+.personal-questionnaire h1 {
+  font-size: 45px;
+  line-height: 46px;
+  text-align: right;
+  font-weight: 700;
+}
+.personal-questionnaire h2 {
+  margin: 14px 0 0;
+}
+.personal-questionnaire .page-quiz--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 39px 0 0;
+  gap: 32px;
+}
+.personal-questionnaire .main-questionnaire__button {
+  background: url("../img/bg-button.png") no-repeat;
+  background-size: contain;
+  width: 638px;
+  height: 166px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.brand {
+  margin: 2px 0 0;
+}
+.brand-text {
+  min-height: 79px;
+}
+.brand-text-read_more {
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+.brand-text-read_more a {
+  font-size: 23px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  font-weight: 900;
+}
+.brand-topic {
+  color: #D7BD62;
+  font-weight: 400;
+}
+.brand h1 {
+  font-size: 45px;
+  line-height: 46px;
+  text-align: right;
+  font-weight: 700;
+}
+.brand h2 {
+  margin: 14px 0 0;
+}
+.brand .page-quiz--inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 39px 0 0;
+  gap: 32px;
+}
+.brand .page-quiz--inner-brand {
+  margin: 4px 0 0;
+}
+.brand .main-questionnaire__button {
+  background: url("../img/bg-button.png") no-repeat;
+  background-size: contain;
+  width: 638px;
+  height: 166px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.scent-families .personal-questionnaire .page-quiz--inner {
+  margin: 44px 0 0;
+}
+.scent-families .inputGroup {
+  display: block;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.scent-families .inputGroup label {
+  padding: 12px 30px;
+  width: 100%;
+  display: block;
+  text-align: right;
+  color: #3C454C;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+  height: 100%;
+}
+.scent-families .inputGroup label:before {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.scent-families .inputGroup label:after {
+  width: 70px;
+  height: 70px;
+  content: "";
+  border: 3px solid #fff;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  right: 123px;
+  top: 82px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+.scent-families .inputGroup input:checked ~ label {
+  color: #fff;
+}
+.scent-families .inputGroup input:checked ~ label:before {
+  transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  opacity: 1;
+}
+.scent-families .inputGroup input:checked ~ label:after {
+  background-color: #fff;
+  border-color: #fff;
+  background-image: url("../img/icons/btn-icon-v.svg");
+  background-position: center;
+}
+.scent-families .inputGroup input {
+  width: 70px;
+  height: 70px;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  visibility: hidden;
+}
+.scent-families .inputGroup .kadomi-perfumes-component__button-topic {
+  position: relative;
+  right: 194px;
+  top: 81px;
+}
+.scent-families .inputGroup .kadomi-perfumes-component__button-topic-text {
+  line-height: 100%;
+}
+.scent-families .inputGroup .kadomi-perfumes-component__button-topic-info {
+  line-height: 40px;
+  margin-top: -2px;
+}

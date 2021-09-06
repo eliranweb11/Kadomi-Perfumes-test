@@ -1,0 +1,165 @@
+// Mixins
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+// (1) Placeholders
+@mixin placeholder {
+
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+// (2) Media Queries
+@mixin xl-up {
+    @media only screen and (min-width: 1921px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (max-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @media only screen and (min-width: 1681px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (max-width: 1680px) {
+        @content;
+    }
+}
+
+@mixin semi-lg-up {
+    @media only screen and (min-width: 1481px) {
+        @content;
+    }
+}
+
+@mixin semi-lg {
+    @media only screen and (max-width: 1480px) {
+        @content;
+    }
+}
+
+@mixin semi-md-up {
+    @media only screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin md-up {
+    @media only screen and (min-width: 1281px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin wp-md {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin wp-sm {
+    @media only screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin sm-up {
+    @media only screen and (min-width: 991px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: 990px) {
+        @content;
+    }
+}
+
+@mixin wp-xs {
+    @media only screen and (max-width: 782px) {
+        @content;
+    }
+}
+
+@mixin xs-up {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin xxs-up {
+    @media only screen and (min-width: 416px) {
+        @content;
+    }
+}
+
+@mixin wp-xxs-up {
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin wp-xxs {
+    @media only screen and (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin xxs-sm {
+    @media only screen and (max-width: 428px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media only screen and (max-width: 415px) {
+        @content;
+    }
+}
+
+@mixin xxxs-up {
+    @media only screen and (min-width: 366px) {
+        @content;
+    }
+}
+
+@mixin xxxs {
+    @media only screen and (max-width: 365px) {
+        @content;
+    }
+}

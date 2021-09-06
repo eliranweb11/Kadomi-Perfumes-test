@@ -1,0 +1,16 @@
+
+/* Globals and Absctracts */
+@import '_child_theme_variables';
+@import 'mixins';
+@import 'globals';
+@import '_header';
+@import '_footer';
+
+/* Component styling */
+@import 'components/components';
+
+/* Blocks styling */
+// @import 'blocks/blocks';
+
+/* Page Templates */
+@import 'pages/pages';

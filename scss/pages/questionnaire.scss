@@ -1,0 +1,36 @@
+#questionnaire{
+    .page{
+        &-questionnaire{
+            &--inner{
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                margin: 75px 0 0;
+                gap: 32px;
+            }
+        }
+    }
+    .questionnaire{
+        &__button{
+            background:url("../img/bg-button.png") no-repeat;
+            background-size:contain;
+            width:630px;
+            height:158px;
+            margin: 0 auto;
+            border: 0;
+            color:$white;
+            &-title{
+                font-size: 48px;
+                line-height: 100%;
+                font-weight: 700;
+                padding: 23px 0 9px;
+                color:$white;
+            }
+            &-info{
+                font-size: 27px;
+                line-height: 27px;
+                color:$white;
+            }
+        }
+    }
+}

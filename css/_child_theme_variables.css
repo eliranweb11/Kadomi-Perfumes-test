@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "asimon";
+  font-weight: 400;
+  /*(regular)*/
+  font-style: normal;
+  src: url("../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff2") format("woff2"), url("../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff") format("woff");
+}
+@font-face {
+  font-family: "asimon";
+  font-weight: 700;
+  /*(bold)*/
+  font-style: normal;
+  src: url("../fonts/almoni-bold/webfont_files/almoni-bold-aaa.woff2") format("woff2"), url("../fonts/almoni-bold/webfont_files/asimon-bold-aaa.woff") format("woff");
+}
+@font-face {
+  font-family: "asimon";
+  font-weight: 900;
+  /*(black)*/
+  font-style: normal;
+  src: url("../fonts/almoni-black/webfont_files/almoni-black-aaa.woff2") format("woff2"), url("../fonts/almoni-black/webfont_files/asimon-black-aaa.woff") format("woff");
+}

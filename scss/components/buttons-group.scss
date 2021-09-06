@@ -1,0 +1,82 @@
+.kadomi-perfumes-component{
+    &__buttons-group {
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+        gap:41px;
+        // @include md{
+        //     a{
+        //         font-size:15px;
+        //         margin: 0;
+        //     }
+        // }
+    }
+    &__button{
+        width:929px;
+        height:300px;
+        background-size:contain;
+        background-repeat: no-repeat;
+        position: relative;
+        &-topic{
+            position:absolute;
+            right: 44px;
+            bottom: 27px;
+            font-size: 48px;
+            line-height: 56px;
+            font-weight:700;
+            color:$white;
+            &-text{
+                position: relative;
+            }
+            &-info{font-weight:400;
+                font-size:40px;
+            }
+        }
+
+        &-wife{
+            background-image: url("../img/bg-wife.jpg");
+        }
+        &-daily{
+            background-image: url("../img/bg-daily.jpg");
+        }
+        &-calm{
+            background-image: url("../img/bg-calm.jpg");
+            .kadomi-perfumes-component__button-topic{
+                bottom: 46px;
+                &-text{
+                    margin-bottom: -14px;
+                }
+            }
+        }
+        &-horseman{
+            background-image: url("../img/bg-horseman.jpg");
+            .kadomi-perfumes-component__button-topic{
+                bottom: 46px;
+                &-text{
+                    margin-bottom: -14px;
+                }
+            }
+        }
+        &-cool{
+            background-image: url("../img/bg-cool.jpg");
+        }
+        &-warm{
+            background-image: url("../img/bg-warm.jpg");
+        }
+    }
+}
+#situation,#style,#weather{
+    .kadomi-perfumes-component__button{
+        height:303px;
+    }
+}
+#scent-families{
+    .kadomi-perfumes-component__button{
+        width: 926px;
+        height:302px;
+        &-hadari{
+            background-image: url("../img/bg/bg-hadari.jpg");
+        }
+    }
+}
+

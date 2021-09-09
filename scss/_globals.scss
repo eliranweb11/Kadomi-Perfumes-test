@@ -45,10 +45,10 @@ a{text-decoration:none;color:$white;
     margin:20px auto;
     display: block;
     background: url("../img/bg.jpg") no-repeat;
-    background-size: contain;
+    background-size: cover;
     width:100%;
-    max-width:992px;
-    height:1440px;
+    max-width:990px;
+    // height:1440px;
     // border:solid 1px palevioletred;
     overflow: hidden;
     display:block;
@@ -72,6 +72,9 @@ h2
     font-size: 40px;
     line-height: 44px;
     font-weight:400;
+}
+h3{
+    font-size:30px;
 }
 .container{
     padding:0 32px;

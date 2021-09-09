@@ -1,80 +1,161 @@
 /* #header
 ================================================== */
 footer{
-    &.footer-scent-families{
-        height:164px;
-        background:$gradients;
-        position:fixed;
-        left:0;
-        bottom:0;
-        width:100%;
-        max-width: 990px;
-        // position:absolute;
-        z-index:2;
-        display:flex;
-        .footer-scent-families{
-            &-text{
-                font-size: 25px;
-                line-height: 26px;
-                font-weight:700;
+    // min-height: 156px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    &.footer{
+        //product-description
+        &-product-description{
+            position: relative;
+            .footer-product-description{
+                &-bg_sticky{
+                    background:$maroon;
+                    height:156px;
+                    max-width:990px;
+                    width:100%;
+                    margin:0 auto;
+                    display:flex;
+                    align-items:center;
+                    font-size: 35px;
+                    text-align:center;
+                    justify-content:center;
+                    a{
+                        text-decoration:underline;
+                        &::before{
+                            content: url(../img/icons/icon-back.svg);
+                            width:25px;
+                            height:25px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        &-menu-quiz{
+            .footer-menu-quiz{
+                &-bg_sticky{
+                    background:$black;
+                    height:156px;
+                    max-width:990px;
+                    width:100%;
+                    margin:0 auto;
+                    display:flex;
+                    align-items:center;
+                }
+            }
+            
+        }
+        &-scent-families{
+            height:164px;
+            background:$gradients;
+            position:fixed;
+            left:0;
+            bottom:0;
+            width:100%;
+            max-width: 990px;
+            // position:absolute;
+            z-index:2;
+            display:flex;
+            .footer-scent-families{
+                &-text{
+                    font-size: 25px;
+                    line-height: 26px;
+                    font-weight:700;
+                    display: flex;
+                    align-items: center;
+                    margin: 13px 32px 0 0;
+                }
+                &-number{
+                    display: contents;
+                }
+            }
+            ul{
+                list-style: none;
+                display:flex;
+                margin: 17px 56px 0;
+                gap: 28px;
+                li{
+                    &:before{
+                        content:'';
+                        background-image: url("../img/icons/arrow-right.png");
+                        width: 21px;
+                        height: 8px;
+                        margin-right: -8px;                
+                    }
+                    width: 129px;
+                    height: 129px;
+                    border-radius:50%;
+                    background-color:$black;
+                    font-size: 30px;
+                    color:$primary;
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-between;
+                    &:after{
+                        content:'';
+                        background-image: url("../img/icons/arrow-left.png");
+                        width: 21px;
+                        height: 8px;
+                        margin-left: -8px;                
+                    }
+                }
+            }
+            .btn-results{
+                border: 1px solid rgba(215, 189, 98, 0.32);
+                box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+                background:$black;
+                color:$primary;
+                position: absolute;
+                bottom: 33px;
+                width: 232px;
+                height: 232px;
+                left: -62px;
+                font-size: 40px;
+                line-height: 38px;
+                font-weight: 700;
                 display: flex;
                 align-items: center;
-                margin: 13px 32px 0 0;
-            }
-            &-number{
-                display: contents;
+                text-align:center;
+                border-radius: 50%;
+                justify-content: right;
+                padding: 7px 26px 0 0;
             }
         }
-        ul{
-            list-style: none;
-            display:flex;
-            margin: 17px 56px 0;
-            gap: 28px;
-            li{
-                &:before{
-                    content:'';
-                    background-image: url("../img/icons/arrow-right.png");
-                    width: 21px;
-                    height: 8px;
-                    margin-right: -8px;                
-                }
-                width: 129px;
-                height: 129px;
-                border-radius:50%;
-                background-color:$black;
-                font-size: 30px;
-                color:$primary;
-                display:flex;
-                align-items:center;
-                justify-content:space-between;
+    }
+    #footer-menu{
+        flex-direction:row;
+        font-weight: 700;
+        font-size: 18px;
+        padding:0 32px;
+        gap:31px;
+        justify-content:space-between;
+        .menu-item{
+            .nav-link{
+                color: rgba(215, 189, 98, 0.6);
+                display: inline-block;
+                position: relative;
+                padding:0 14px 30px;
                 &:after{
-                    content:'';
-                    background-image: url("../img/icons/arrow-left.png");
-                    width: 21px;
-                    height: 8px;
-                    margin-left: -8px;                
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: linear-gradient(269.16deg, rgba(215, 189, 98, 0.5) 49.27%, rgba(172, 135, 49, 0.5) 67.73%);
+                    height:17px;
+                    border-radius:50px;
+                }
+                &.active,&:hover{
+                    color:$primary;
+                    &:after{
+                        background: linear-gradient(269.16deg, #D7BD62 49.27%, #AC8731 67.73%);
+                    }
                 }
             }
-        }
-        .btn-results{
-            border: 1px solid rgba(215, 189, 98, 0.32);
-            box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
-            background:$black;
-            color:$primary;
-            position: absolute;
-            bottom: 33px;
-            width: 232px;
-            height: 232px;
-            left: -62px;
-            font-size: 40px;
-            line-height: 38px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            text-align:center;
-            border-radius: 50%;
-            justify-content: right;
-            padding: 7px 26px 0 0;
         }
     }
 }

@@ -106,6 +106,50 @@
                     }
                 }
         }
+        //product-description
+        &-product-description{
+                display:flex;
+                &-content{
+                    font-size: 30px;
+                    line-height: 31px;
+                    padding: 58px 20px 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    &__text{
+                        padding-right:4px;
+                        h3{
+                            font-weight: 700;
+                            margin-bottom: 30px;
+                            color:$primary;
+                        }
+                        p{
+                            color:$white;
+                            font-size: 30px;
+                            line-height: 30px;
+                            padding-bottom:30px;
+                        }
+                    }
+                    &__show_more{
+                        width: 149px;
+                        height: 46px;
+                        background-color:$black;
+                        margin: 37px 0 19px;
+                        text-align:center;
+                        a{
+                            font-size: 30px;
+                            color:$primary;
+                            line-height: 46px;
+                        }
+                    }
+                }
+                &-img{
+                    max-width: 413px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: -17px 0 0;
+                }
+        }
     }
 }
 

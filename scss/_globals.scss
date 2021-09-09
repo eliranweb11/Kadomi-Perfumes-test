@@ -26,12 +26,12 @@ html, body {
     -moz-osx-font-smoothing: grayscale;
 }
 body{
-    background-color:rgb(207, 207, 236);
     color:$white;
     font-family:$main-font;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    background-color:$bl;
 }
 a{text-decoration:none;color:$white;
     &:hover{
@@ -42,18 +42,19 @@ a{text-decoration:none;color:$white;
 .wrapper{
     // float:left;
     width:992px;
-    margin:20px auto;
+    margin:0 auto;
     display: block;
     background: url("../img/bg.jpg") no-repeat;
     background-size: cover;
     width:100%;
     max-width:990px;
-    // height:1440px;
+    height:1440px;
     // border:solid 1px palevioletred;
     overflow: hidden;
     display:block;
     position: relative;
     box-sizing: border-box;
+    padding-bottom:40px;
 }
 /* Titles and typography */
 h1 {

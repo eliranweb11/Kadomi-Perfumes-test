@@ -27,4 +27,27 @@ $(document).ready(function(){
         $('.question-item[data-question="' + question + '"]').show();
     }
 
+
+});
+
+//filter
+document.addEventListener('DOMContentLoaded', function() {
+    var menu, toggleButton, closeButton;
+
+    // Set Elements
+    menu = document.getElementById('slideout-menu');
+    toggleButton = document.getElementById('slideout-toggle');
+    closeButton = document.getElementById('slideout-close');
+
+    // Toggle Menu
+    toggleButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        menu.classList.toggle('is-open');
+    });
+
+    // Close Menu
+    closeButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        menu.classList.remove('is-open');
+    });
 });

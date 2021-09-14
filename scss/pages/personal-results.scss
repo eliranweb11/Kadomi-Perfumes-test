@@ -38,6 +38,12 @@
                 gap: 32px;
                 &-personal-results{
                     margin:6px 0 0;
+                    @include sm-down{
+                        margin:6px 32px 0;
+                    }
+                    @include wp-xs{
+                        margin:6px 15px 0
+                    }
                 }
             }
         }

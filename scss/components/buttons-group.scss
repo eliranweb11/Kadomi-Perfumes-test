@@ -4,12 +4,6 @@
         align-items: center;
         flex-direction:column;
         gap:41px;
-        // @include md{
-        //     a{
-        //         font-size:15px;
-        //         margin: 0;
-        //     }
-        // }
     }
     &__button{
         width:929px;
@@ -17,6 +11,11 @@
         background-size:contain;
         background-repeat: no-repeat;
         position: relative;
+        @include wp-xs{
+            background-size:cover;
+            width:100%;
+            height:280px;
+        }
         &-topic{
             position:absolute;
             right: 44px;
@@ -33,14 +32,16 @@
             }
         }
 
-        &-wife{
-            background-image: url("../img/bg-wife.jpg");
-        }
-        &-daily{
-            background-image: url("../img/bg-daily.jpg");
-        }
-        &-calm{
-            background-image: url("../img/bg-calm.jpg");
+        &-wife{background-image: url("../img/bg/bg-wife.jpg")}
+        &-man{background-image: url("../img/bg/bg-man.jpg")}
+        &-unisex{background-image: url("../img/bg/bg-unisex.jpg")}
+        &-daily{background-image: url("../img/bg/bg-daily.jpg")}
+        &-work{background-image: url("../img/bg/bg-work.jpg")}
+        &-recreation{background-image: url("../img/bg/bg-recreation.jpg")}
+        &-calm{background-image: url("../img/bg/bg-calm.jpg")}
+        &-horseman{background-image: url("../img/bg/bg-horseman.jpg")}
+        &-elegant{background-image: url("../img/bg/bg-elegant.jpg")}
+        &-calm,&-horseman,&-elegant{
             .kadomi-perfumes-component__button-topic{
                 bottom: 46px;
                 &-text{
@@ -48,21 +49,8 @@
                 }
             }
         }
-        &-horseman{
-            background-image: url("../img/bg-horseman.jpg");
-            .kadomi-perfumes-component__button-topic{
-                bottom: 46px;
-                &-text{
-                    margin-bottom: -14px;
-                }
-            }
-        }
-        &-cool{
-            background-image: url("../img/bg-cool.jpg");
-        }
-        &-warm{
-            background-image: url("../img/bg-warm.jpg");
-        }
+        &-cool{background-image: url("../img/bg/bg-cool.jpg")}
+        &-hot{background-image: url("../img/bg/bg-hot.jpg")}
     }
     //More results
     &__more-results{
@@ -98,9 +86,14 @@
     .kadomi-perfumes-component__button{
         width: 926px;
         height:302px;
-        &-hadari{
-            background-image: url("../img/bg/bg-hadari.jpg");
+        @include wp-xs{
+            background-size:cover;
+            width:100%;
+            height:280px;
         }
+        &-hadari{background-image: url("../img/bg/bg-hadari.jpg")}
+        &-aromatic{background-image: url("../img/bg/bg-aromatic.jpg")}
+        &-fruity{background-image: url("../img/bg/bg-fruity.jpg")}
     }
 }
 

@@ -104,8 +104,19 @@
     }
 }
 
+@mixin sm-down {
+    @media only screen and (max-width: 950px) {
+        @content;
+    }
+}
+
 @mixin wp-xs {
-    @media only screen and (max-width: 782px) {
+    @media only screen and (max-width:900px) {
+        @content;
+    }
+}
+@mixin wp-xs-down {
+    @media only screen and (max-width:880px) {
         @content;
     }
 }

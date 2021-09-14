@@ -8,7 +8,6 @@
     <title>KADOMI PERFUME</title>
     <link rel="stylesheet" href="css/main.css"  id="css-main">
     <link href='https://fonts.googleapis.com/css?family=Dosis:400,700,800' rel='stylesheet' type='text/css'>
-
 </head>
 <body dir="rtl">
     <div class="wrapper wrapper-main">
@@ -20,9 +19,9 @@
                 </a>
             </div>
             <ul id="main-menu" class="navbar-nav">
-                <li class="menu-item"><a class="nav-link active" href="#">שאלון אישי</a></li>
-                <li class="menu-item"><a class="nav-link" href="#">משפחות ריח</a></li></li>
-                <li class="menu-item"><a class="nav-link" href="#">מותג</a></li></li></li>
+                <li class="menu-item"><a class="nav-link active" href="personal-results.html">שאלון אישי</a></li>
+                <li class="menu-item"><a class="nav-link" href="scent-families.html">משפחות ריח</a></li></li>
+                <li class="menu-item"><a class="nav-link" href="brand.html">מותג</a></li></li></li>
             </ul>
         </header>
         <!-- End == header == -->
@@ -31,12 +30,194 @@
                 <!-- == gender == -->
                 <section id="personal-results">
                     <div class="container">
-                        <div class="personal-results-text">
-                            <h1><span class="personal-results-topic">תוצאות שאלון אישי</span></h1>
-                            <button>חיפוש לפי:</button>
+                        <div class="personal-results-text brand-name-filter">
+                            <h1><span class="personal-results-topic">מותג</span> MINATO</h1>
+                            <div class="slideout-wrp">
+                                <img src="img/icons/icon-filter.svg" alt="">
+                                <a id="slideout-toggle" class="slideout-toggle" href="">חיפוש לפי:</a>
+                            </div>
                         </div>
                     </div>
-                    
+                    <div id="wrp--slideout-menu">
+                        <nav id="slideout-menu" class="slideout-menu">
+                            <a id="slideout-close" class="slideout-close" href="#"><img src="img/icons/X.svg" alt=""></a>
+                            <div class="slideout-menu-wrp">
+                                <ul class="slideout-menu-category">
+                                    <li><a href="javascript:void(0)" data-category="1" title="">למי מיועד הבושם</a></li>
+                                    <li><a href="javascript:void(0)" data-category="2">למתי מיועד הבושם</a></li>
+                                    <li><a href="javascript:void(0)" data-category="3">מהו סגנון הבושם</a></li>
+                                    <li><a href="javascript:void(0)" data-category="4">לאיזה עונה הבושם</a></li>
+                                    <li><a href="javascript:void(0)" data-category="5">בחירת הריח המועדף</a></li>
+                                </ul>
+                                <div class="menu-item" data-category="1">
+                                    <a href="javascript:void(0)" class="menu-item-icon_back"></a>
+                                    <div class="menu-item-title">
+                                        למי מיועד הבושם?
+                                    </div>
+                                    <div class="check-container-wrp">
+                                        <ul>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    אשה
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    גבר
+                                                </label>
+                                            </li>
+                                            <li>
+                                                 <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    יוניסקס
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item" data-category="2">
+                                    <a href="javascript:void(0)" class="menu-item-icon_back"></a>
+                                    <div class="menu-item-title">
+                                       למתי מיועד הושם
+                                    </div>
+                                    <div class="check-container-wrp">
+                                        <ul>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    יום יומי
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    עבודה
+                                                </label>
+                                            </li>
+                                            <li>
+                                                 <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    בילוי
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item" data-category="3">
+                                    <a href="javascript:void(0)" class="menu-item-icon_back"></a>
+                                    <div class="menu-item-title">
+                                       מהו סגנון הבושם
+                                    </div>
+                                    <div class="check-container-wrp">
+                                        <ul>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    רוגע
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    פרש
+                                                </label>
+                                            </li>
+                                            <li>
+                                                 <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    אלגנט
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item" data-category="4">
+                                    <a href="javascript:void(0)" class="menu-item-icon_back"></a>
+                                    <div class="menu-item-title">לאיזה עונה הבושם</div>
+                                    <div class="check-container-wrp">
+                                        <ul>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    קריר
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    חמים
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="menu-item" data-category="5">
+                                    <a href="javascript:void(0)" class="menu-item-icon_back"></a>
+                                    <div class="menu-item-title">בחירת הריח המועדף</div>
+                                    <div class="check-container-wrp">
+                                        <ul>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    הדרי
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    ארומטי
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    ריחות ים
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    קטורת, טבק
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    פירותי
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    עצי
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    תבליני
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    פרחוני
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="check-container"><input type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    אוד
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                         </nav>
+                    </div>
                     <div class="page-quiz--inner page-quiz--inner-personal-results">
                         <div class="quiz-block quiz-block__buttons-group">
                             <div class="kadomi-perfumes-component__box-group">

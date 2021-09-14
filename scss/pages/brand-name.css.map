@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,kBAAQ,CAAA;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;EACnB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAC,IAAI;CAClB",
+    "sources": [
+        "brand-name.scss"
+    ],
+    "names": [],
+    "file": "brand-name.css"
+}

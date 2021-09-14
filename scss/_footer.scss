@@ -50,16 +50,26 @@ footer{
             
         }
         &-scent-families{
-            height:164px;
-            background:$gradients;
             position:fixed;
             left:0;
             bottom:0;
             width:100%;
-            max-width: 990px;
             // position:absolute;
             z-index:2;
             display:flex;
+            .footer-scent-families{
+                &-bg_sticky{
+                    background:$gradients;
+                    height:164px;
+                    max-width:990px;
+                    width:100%;
+                    margin:0 auto;
+                    display:flex;
+                    align-items:center;
+                    position: relative;
+                    overflow-x: clip;
+                }
+            }
             .footer-scent-families{
                 &-text{
                     font-size: 25px;

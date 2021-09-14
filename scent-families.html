@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <title>KADOMI PERFUME</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css"  id="css-main">
     <link href='https://fonts.googleapis.com/css?family=Dosis:400,700,800' rel='stylesheet' type='text/css'>
 
 </head>
@@ -20,8 +20,8 @@
                 </a>
             </div>
             <ul id="main-menu" class="navbar-nav">
-                <li class="menu-item"><a class="nav-link active" href="main-questionnaire.html">שאלון אישי</a></li>
-                <li class="menu-item"><a class="nav-link" href="#">משפחות ריח</a></li></li>
+                <li class="menu-item"><a class="nav-link active" href="personal-results.html">שאלון אישי</a></li>
+                <li class="menu-item"><a class="nav-link" href="scent-families.html">משפחות ריח</a></li></li>
                 <li class="menu-item"><a class="nav-link" href="brand.html">מותג</a></li></li></li>
             </ul>
         </header>
@@ -34,15 +34,15 @@
                         <section id="scent-families" class="question-item" data-question="1">
                             <div class="container">
                                 <div class="personal-questionnaire-text">
-                                    <h1><span class="personal-questionnaire-topic">משפחות ריח</span> מהו סגנון הבושם?</h1>
+                                    <h1><span class="personal-questionnaire-topic">משפחות ריח</span> מהו הניחוח המועדף עליך? </h1>
                                     <h2>
-                                        בושם הוא כמו בגד, כמו שאתם מחליפים בגדים
+                                        זו היא שאלה אופציונאלית שבאמצעותה ניתן לדייק את ההתאמה
                                         <br>
-                                        כך מומלץ לגוון בבשמים
+                                        על ידי בחירת הניחוחות המועדפים עליך ממשפחות הריח.
                                         <br>
-                                        כך מומלץ לגוון בבשמים
+                                        נא לבחור עד 3 משפחות ריח כאשר הבחירה הראשונה היא
                                         <br>
-                                        כך מומלץ לגוון בבשמים
+                                        הדומיננטית ביותר וכך הלאה
                                     </h2>
                                 </div>
                                 <form>
@@ -65,33 +65,17 @@
                                                         </label>
                                                       </div>
                                                 </div>
-                                                <div class="kadomi-perfumes-component__button kadomi-perfumes-component__button-hadari answer-item"  href="javascript:void(0)" data-answer="1">
+                                                <div class="kadomi-perfumes-component__button kadomi-perfumes-component__button-aromatic answer-item"  href="javascript:void(0)" data-answer="1">
                                                     <div class="inputGroup">
-                                                        <input id="option1" name="option1" type="checkbox"/>
-                                                        <label for="option1">
+                                                        <input id="option2" name="option2" type="checkbox"/>
+                                                        <label for="option2">
                                                             <div class="kadomi-perfumes-component__button-topic">
                                                                 <div class="kadomi-perfumes-component__button-topic-text">
-                                                                    הדרי
+                                                                    ארומטי
                                                                 </div>
                                                                 <div class="kadomi-perfumes-component__button-topic-info">
-                                                                   ניחוח רענן וקליל המשדר <br>
-                                                                   טבעיות וניקיון
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                      </div>
-                                                </div>
-                                                <div class="kadomi-perfumes-component__button kadomi-perfumes-component__button-aromatiֿ answer-item"  href="javascript:void(0)" data-answer="1">
-                                                    <div class="inputGroup">
-                                                        <input id="option1" name="option1" type="checkbox"/>
-                                                        <label for="option1">
-                                                            <div class="kadomi-perfumes-component__button-topic">
-                                                                <div class="kadomi-perfumes-component__button-topic-text">
-                                                                    הדרי
-                                                                </div>
-                                                                <div class="kadomi-perfumes-component__button-topic-info">
-                                                                   ניחוח רענן וקליל המשדר <br>
-                                                                   טבעיות וניקיון
+                                                                    ניחוח רענן ומרומם המשדר <br>
+                                                                    אנרגטיות ומרץ
                                                                 </div>
                                                             </div>
                                                         </label>
@@ -99,15 +83,15 @@
                                                 </div>
                                                 <div class="kadomi-perfumes-component__button kadomi-perfumes-component__button-fruity answer-item"  href="javascript:void(0)" data-answer="1">
                                                     <div class="inputGroup">
-                                                        <input id="option1" name="option1" type="checkbox"/>
-                                                        <label for="option1">
+                                                        <input id="option3" name="option3" type="checkbox"/>
+                                                        <label for="option3">
                                                             <div class="kadomi-perfumes-component__button-topic">
                                                                 <div class="kadomi-perfumes-component__button-topic-text">
-                                                                    הדרי
+                                                                    פירותי
                                                                 </div>
                                                                 <div class="kadomi-perfumes-component__button-topic-info">
-                                                                   ניחוח רענן וקליל המשדר <br>
-                                                                   טבעיות וניקיון
+                                                                    ניחוח מתוק ועסיסי המשדר <br>
+                                                                    מודרניות ומקוריות
                                                                 </div>
                                                             </div>
                                                         </label>
@@ -124,35 +108,42 @@
             </div>
         </main>
         <footer class="footer-scent-families">
-            <span class="footer-scent-families-text">
-                הבחירה שלך
-            </span>
-            <ul>
-                <li>
-                    <div class="footer-scent-families-number">1.</div>
-                    <br>
-                    הדרי
-                </li>
-                <li>
-                    <div class="footer-scent-families-number">2.</div>
-                    <br>
-                    ארומטי
-                </li>
-                <li>
-                    <div class="footer-scent-families-number">3.</div>
-                    <br>
-                    ריחות ים
-                </li>
-            </ul>
-            <a href="#" class="btn-results">
-                לצפייה
-                <br/>
-                בתוצאות
-            </a>
+            <div class="footer-scent-families-bg_sticky">
+                <span class="footer-scent-families-text">
+                    הבחירה שלך
+                </span>
+                <ul>
+                    <li>
+                        <div class="footer-scent-families-number">1.</div>
+                        <br>
+                        הדרי
+                    </li>
+                    <li>
+                        <div class="footer-scent-families-number">2.</div>
+                        <br>
+                        ארומטי
+                    </li>
+                    <li>
+                        <div class="footer-scent-families-number">3.</div>
+                        <br>
+                        ריחות ים
+                    </li>
+                </ul>
+                <a href="#" class="btn-results">
+                    לצפייה
+                    <br/>
+                    בתוצאות
+                </a>
+            </div>
         </footer>
     </div>
     <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
     <!-- <script src="js/main.js"></script> -->
+    <script type="text/javascript">
+        //css
+        let resourcePath1 = 'css/main.css';
+        document.getElementById('css-main').href = resourcePath1 + '?v=' + Date.now();
+    </script>
 </body>
 </html>

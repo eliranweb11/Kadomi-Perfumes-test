@@ -1,5 +1,11 @@
 .product-description{
     margin:2px 0 0;
+    @include sm-down{
+        margin:2px 32px 0;
+    }
+    @include wp-xs{
+        margin:2px 15px 0;
+    }
     //font
     &-text{
         min-height: 79px;
@@ -33,7 +39,7 @@
             &--inner{
                 display: flex;
                 flex-direction: column;
-                justify-content:center;
+                // justify-content:center;
                 margin:39px auto;
                 gap: 32px;
                 max-width:902px;
@@ -41,6 +47,12 @@
                 min-height:969px;
                 &-personal-results{
                     margin:6px 0 0;
+                    @include sm-down{
+                        margin:6px 32px 0;
+                    }
+                    @include wp-xs{
+                        margin:6px 15px 0
+                    }
                 }
             }
         }

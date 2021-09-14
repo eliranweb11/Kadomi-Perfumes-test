@@ -36,8 +36,17 @@
                 justify-content:center;
                 margin:39px 0 0;
                 gap: 32px;
+                @include sm-down{
+                    margin:39px 32px 0;
+                }
                 &-brand{
                     margin:4px 0 0;
+                    @include sm-down{
+                        margin:4px 32px 0;
+                    }
+                    @include wp-xs{
+                        margin:4px 15px 0
+                    }
                 }
             }
         }

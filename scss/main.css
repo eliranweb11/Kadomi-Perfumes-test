@@ -1,25 +1,29 @@
+@charset "UTF-8";
 /* Globals and Absctracts */
 @font-face {
-  font-family: "asimon";
+  font-family: 'asimon';
   font-weight: 400;
   /*(regular)*/
   font-style: normal;
   src: url("../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff2") format("woff2"), url("../fonts/almoni-regular/webfont_files/almoni-regular-aaa.woff") format("woff");
 }
+
 @font-face {
-  font-family: "asimon";
+  font-family: 'asimon';
   font-weight: 700;
   /*(bold)*/
   font-style: normal;
   src: url("../fonts/almoni-bold/webfont_files/almoni-bold-aaa.woff2") format("woff2"), url("../fonts/almoni-bold/webfont_files/asimon-bold-aaa.woff") format("woff");
 }
+
 @font-face {
-  font-family: "asimon";
+  font-family: 'asimon';
   font-weight: 900;
   /*(black)*/
   font-style: normal;
   src: url("../fonts/almoni-black/webfont_files/almoni-black-aaa.woff2") format("woff2"), url("../fonts/almoni-black/webfont_files/asimon-black-aaa.woff") format("woff");
 }
+
 /* Reset==================================================*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,6 +64,7 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
 a:hover {
   color: #fff;
 }
@@ -75,8 +80,10 @@ a:hover {
   overflow: hidden;
   display: block;
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 .wrapper-main {
   padding-bottom: 156px;
 }
@@ -88,23 +95,11 @@ h1 {
   line-height: 63px;
   text-align: center;
 }
-@media only screen and (max-width: 880px) {
-  h1 {
-    font-size: 50px;
-    line-height: 52px;
-  }
-}
 
 h2 {
   font-size: 40px;
   line-height: 44px;
   font-weight: 400;
-}
-@media only screen and (max-width: 880px) {
-  h2 {
-    font-size: 34px;
-    line-height: 36px;
-  }
 }
 
 h3 {
@@ -115,23 +110,25 @@ h3 {
   padding: 0 32px;
   max-width: 990px;
 }
-@media only screen and (max-width: 900px) {
-  .container {
-    padding: 0 15px;
-  }
-}
 
 /* #Forms - login
 ================================================== */
 .login__form {
   margin: 0 180px;
 }
+
 .login__form .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 76px 0 0;
   gap: 40px;
 }
+
 .login__form .form input {
   border: 1px solid #D7BD62;
   background: transparent;
@@ -140,6 +137,7 @@ h3 {
   color: #fff;
   text-align: center;
 }
+
 .login__form .form .btn-login {
   background: url("../img/bg-button.png") no-repeat;
   background-size: contain;
@@ -150,94 +148,50 @@ h3 {
   color: #fff;
 }
 
-/* #Custom Checkbox
-================================================== */
-.check-container {
-  display: flex;
-  position: relative;
-  padding-right: 85px;
-  user-select: none;
-  cursor: pointer;
-  font-size: 40px;
-  font-weight: 700;
-  align-items: center;
-  height: 49px;
-  padding-top: 10px;
-}
-.check-container-wrp {
-  gap: 63px;
-  margin-bottom: 50px;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 49px;
-  height: 49px;
-  border: 4px solid #fff;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-input:checked ~ .checkmark {
-  background: transparent;
-}
-input:checked ~ .checkmark::after {
-  display: block;
-}
-.checkmark::after {
-  content: url(../img/icons/checkmark.svg);
-  width: 29px;
-  height: 22px;
-  display: none;
-  position: absolute;
-  top: 0.6rem;
-  left: 0.4rem;
-}
-
-/* hide default checkbox */
-input[type=checkbox] {
-  width: 0;
-  height: 0;
-  margin: -1px;
-}
-
 /* #header
 ================================================== */
 header {
   padding: 122px 0 102px;
 }
+
 header.header-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 40px 39px 75px;
 }
-@media only screen and (max-width: 900px) {
-  header.header-page {
-    padding: 20px 15px 55px;
-  }
-}
+
 header.header-page .logo img {
   margin: 0;
 }
+
 header .logo img {
   margin: 0 auto;
   display: block;
 }
+
 header #main-menu {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-weight: 700;
   font-size: 24px;
   line-height: 25px;
   padding: 0;
   gap: 18px;
 }
+
 header #main-menu .menu-item .nav-link {
   position: relative;
   color: #fff;
 }
+
 header #main-menu .menu-item .nav-link:after {
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   position: absolute;
@@ -246,9 +200,11 @@ header #main-menu .menu-item .nav-link:after {
   right: 0;
   background-color: #fff;
 }
+
 header #main-menu .menu-item .nav-link.active, header #main-menu .menu-item .nav-link:hover {
   color: #D7BD62;
 }
+
 header #main-menu .menu-item .nav-link.active:after, header #main-menu .menu-item .nav-link:hover:after {
   display: none;
 }
@@ -257,8 +213,56 @@ header #main-menu .menu-item .nav-link.active:after, header #main-menu .menu-ite
   position: relative;
 }
 
+.slideout-menu {
+  background-color: #000;
+  position: absolute;
+  left: -100%;
+  -webkit-transition: left .4s;
+  transition: left .4s;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+}
+
 .slideout-menu.is-open {
   left: 0;
+}
+
+.slideout-menu ul {
+  list-style: none;
+  margin: 0;
+  max-width: 776px;
+  float: left;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 95px;
+  padding: 57px ​68px;
+}
+
+.slideout-menu ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slideout-menu ul li a {
+  color: #fff;
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.slideout-menu ul li a:after {
+  content: url(../img/icons/menu-arrow-left.svg);
+  width: 22px;
 }
 
 .slideout-menu a.slideout-close {
@@ -272,76 +276,16 @@ header #main-menu .menu-item .nav-link.active:after, header #main-menu .menu-ite
   text-decoration: none;
 }
 
-.slideout-menu {
-  background-color: #000;
-  position: absolute;
-  left: -100%;
-  transition: left 0.4s;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 3;
-}
-.slideout-menu-wrp {
-  padding: 57px 68px 50px 43px;
-  background-color: #9B1F3B;
-  max-width: 776px;
-  float: left;
-  height: 100%;
-  width: 100%;
-}
-@media only screen and (max-width: 900px) {
-  .slideout-menu-wrp {
-    max-width: 70%;
-  }
-}
-.slideout-menu-wrp ul {
-  list-style: none;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 95px;
-}
-.slideout-menu-wrp ul li {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-.slideout-menu-wrp ul li a {
-  color: #fff;
-  display: block;
-  font-size: 40px;
-  font-weight: 700;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-}
-.slideout-menu-wrp ul li a:after {
-  content: url(../img/icons/menu-arrow-left.svg);
-  width: 22px;
-}
-.slideout-menu-wrp .menu-item {
-  display: none;
-}
-.slideout-menu-wrp .menu-item-icon_back {
-  background: url(../img/icons/menu-icon-back.svg) no-repeat;
-  width: 43px;
-  height: 40px;
-  display: block;
-  position: absolute;
-  left: 34px;
-  top: 47px;
-}
-.slideout-menu-wrp .menu-item-title {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 101px;
-}
 .slideout-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0 22px;
 }
+
 .slideout-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 13px 0 17px;
   width: 241px;
@@ -349,19 +293,25 @@ header #main-menu .menu-item .nav-link.active:after, header #main-menu .menu-ite
   font-size: 24px;
   line-height: 64px;
   border: solid 1px #D7BD62;
-  box-sizing: border-box;
-  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .slideout-toggle:after {
   content: url(../img/icons/icon-search-arrow-down.svg);
   width: 15px;
   height: 8px;
 }
+
 .slideout-toggle.btn-open:after {
   content: url(../img/icons/icon-search-arrow-left.svg);
   width: 16px;
   height: 8px;
 }
+
 .slideout-toggle span {
   background-color: #888;
   display: block;
@@ -379,75 +329,108 @@ footer {
   margin: 0 auto;
   width: 100%;
 }
+
 footer.footer-product-description {
   position: relative;
 }
+
 footer.footer-product-description .footer-product-description-bg_sticky {
   background: #9B1F3B;
   height: 156px;
   max-width: 990px;
   width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 35px;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 footer.footer-product-description .footer-product-description-bg_sticky a {
   text-decoration: underline;
 }
+
 footer.footer-product-description .footer-product-description-bg_sticky a::before {
   content: url(../img/icons/icon-back.svg);
   width: 25px;
   height: 25px;
   margin-left: 10px;
 }
+
 footer.footer-menu-quiz .footer-menu-quiz-bg_sticky {
   background: #000;
   height: 156px;
   max-width: 990px;
   width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 footer.footer-scent-families {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 footer.footer-scent-families .footer-scent-families-bg_sticky {
   background: linear-gradient(285.32deg, #D7BD62 15.14%, #936F1D 83.8%);
   height: 164px;
   max-width: 990px;
   width: 100%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   overflow-x: clip;
 }
+
 footer.footer-scent-families .footer-scent-families-text {
   font-size: 25px;
   line-height: 26px;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 13px 32px 0 0;
 }
+
 footer.footer-scent-families .footer-scent-families-number {
   display: contents;
 }
+
 footer.footer-scent-families ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 17px 56px 0;
   gap: 28px;
 }
+
 footer.footer-scent-families ul li {
   width: 129px;
   height: 129px;
@@ -455,27 +438,37 @@ footer.footer-scent-families ul li {
   background-color: #000;
   font-size: 30px;
   color: #D7BD62;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 footer.footer-scent-families ul li:before {
-  content: "";
+  content: '';
   background-image: url("../img/icons/arrow-right.png");
   width: 21px;
   height: 8px;
   margin-right: -8px;
 }
+
 footer.footer-scent-families ul li:after {
-  content: "";
+  content: '';
   background-image: url("../img/icons/arrow-left.png");
   width: 21px;
   height: 8px;
   margin-left: -8px;
 }
+
 footer.footer-scent-families .btn-results {
   border: 1px solid rgba(215, 189, 98, 0.32);
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+          box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
   background: #000;
   color: #D7BD62;
   position: absolute;
@@ -486,27 +479,41 @@ footer.footer-scent-families .btn-results {
   font-size: 40px;
   line-height: 38px;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   border-radius: 50%;
-  justify-content: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   padding: 7px 26px 0 0;
 }
+
 footer #footer-menu {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-weight: 700;
   font-size: 18px;
   padding: 0 32px;
   gap: 31px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 footer #footer-menu .menu-item .nav-link {
   color: rgba(215, 189, 98, 0.6);
   display: inline-block;
   position: relative;
   padding: 0 14px 30px;
 }
+
 footer #footer-menu .menu-item .nav-link:after {
   content: "";
   position: absolute;
@@ -517,20 +524,30 @@ footer #footer-menu .menu-item .nav-link:after {
   height: 17px;
   border-radius: 50px;
 }
+
 footer #footer-menu .menu-item .nav-link.active, footer #footer-menu .menu-item .nav-link:hover {
   color: #D7BD62;
 }
+
 footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu-item .nav-link:hover:after {
   background: linear-gradient(269.16deg, #D7BD62 49.27%, #AC8731 67.73%);
 }
 
 /* Component styling */
 .kadomi-perfumes-component__buttons-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 41px;
 }
+
 .kadomi-perfumes-component__button {
   width: 929px;
   height: 300px;
@@ -538,13 +555,7 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   background-repeat: no-repeat;
   position: relative;
 }
-@media only screen and (max-width: 900px) {
-  .kadomi-perfumes-component__button {
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-  }
-}
+
 .kadomi-perfumes-component__button-topic {
   position: absolute;
   right: 44px;
@@ -554,64 +565,88 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   font-weight: 700;
   color: #fff;
 }
+
 .kadomi-perfumes-component__button-topic-text {
   position: relative;
 }
+
 .kadomi-perfumes-component__button-topic-info {
   font-weight: 400;
   font-size: 40px;
 }
+
 .kadomi-perfumes-component__button-wife {
   background-image: url("../img/bg/bg-wife.jpg");
 }
+
 .kadomi-perfumes-component__button-man {
   background-image: url("../img/bg/bg-man.jpg");
 }
+
 .kadomi-perfumes-component__button-unisex {
   background-image: url("../img/bg/bg-unisex.jpg");
 }
+
 .kadomi-perfumes-component__button-daily {
   background-image: url("../img/bg/bg-daily.jpg");
 }
+
 .kadomi-perfumes-component__button-work {
   background-image: url("../img/bg/bg-work.jpg");
 }
+
 .kadomi-perfumes-component__button-recreation {
   background-image: url("../img/bg/bg-recreation.jpg");
 }
+
 .kadomi-perfumes-component__button-calm {
   background-image: url("../img/bg/bg-calm.jpg");
 }
+
 .kadomi-perfumes-component__button-horseman {
   background-image: url("../img/bg/bg-horseman.jpg");
 }
+
 .kadomi-perfumes-component__button-elegant {
   background-image: url("../img/bg/bg-elegant.jpg");
 }
+
 .kadomi-perfumes-component__button-calm .kadomi-perfumes-component__button-topic, .kadomi-perfumes-component__button-horseman .kadomi-perfumes-component__button-topic, .kadomi-perfumes-component__button-elegant .kadomi-perfumes-component__button-topic {
   bottom: 46px;
 }
+
 .kadomi-perfumes-component__button-calm .kadomi-perfumes-component__button-topic-text, .kadomi-perfumes-component__button-horseman .kadomi-perfumes-component__button-topic-text, .kadomi-perfumes-component__button-elegant .kadomi-perfumes-component__button-topic-text {
   margin-bottom: -14px;
 }
+
 .kadomi-perfumes-component__button-cool {
   background-image: url("../img/bg/bg-cool.jpg");
 }
+
 .kadomi-perfumes-component__button-hot {
   background-image: url("../img/bg/bg-hot.jpg");
 }
+
 .kadomi-perfumes-component__more-results {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 23px 0 63px;
   gap: 23px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .kadomi-perfumes-component__more-results-text {
   font-size: 45px;
   color: #D7BD62;
   font-weight: 400;
 }
+
 .kadomi-perfumes-component__more-results .btn-more-results {
   background-color: #9B1F3B;
   width: 229px;
@@ -619,9 +654,15 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   font-size: 25px;
   line-height: 25px;
   text-decoration: underline;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #situation .kadomi-perfumes-component__button, #style .kadomi-perfumes-component__button, #weather .kadomi-perfumes-component__button {
@@ -632,19 +673,15 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   width: 926px;
   height: 302px;
 }
-@media only screen and (max-width: 900px) {
-  #scent-families .kadomi-perfumes-component__button {
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-  }
-}
+
 #scent-families .kadomi-perfumes-component__button-hadari {
   background-image: url("../img/bg/bg-hadari.jpg");
 }
+
 #scent-families .kadomi-perfumes-component__button-aromatic {
   background-image: url("../img/bg/bg-aromatic.jpg");
 }
+
 #scent-families .kadomi-perfumes-component__button-fruity {
   background-image: url("../img/bg/bg-fruity.jpg");
 }
@@ -652,9 +689,15 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 /* === #form === */
 .kadomi-perfumes-component__box-group {
   gap: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .kadomi-perfumes-component__box-brand {
   background: url("../img/bg-brand.jpg") no-repeat;
   background-size: contain;
@@ -663,39 +706,28 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   margin: 0 auto;
   border: 0;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-@media only screen and (max-width: 950px) {
-  .kadomi-perfumes-component__box-brand {
-    background-size: cover;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .kadomi-perfumes-component__box-brand {
-    height: 280px;
-  }
-}
-@media only screen and (max-width: 880px) {
-  .kadomi-perfumes-component__box-brand {
-    height: 100%;
-  }
-}
+
 .kadomi-perfumes-component__box-brand-content {
   font-size: 35px;
   line-height: 35px;
   padding: 33px 61px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-@media only screen and (max-width: 950px) {
-  .kadomi-perfumes-component__box-brand-content {
-    padding: 20px 30px 0;
-  }
-}
+
 .kadomi-perfumes-component__box-brand-content__text {
   padding-right: 4px;
 }
+
 .kadomi-perfumes-component__box-brand-content__show_more {
   width: 149px;
   height: 46px;
@@ -703,30 +735,36 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   margin: 31px 0 19px;
   text-align: center;
 }
-@media only screen and (max-width: 950px) {
-  .kadomi-perfumes-component__box-brand-content__show_more {
-    margin: 20px 0 19px;
-  }
-}
+
 .kadomi-perfumes-component__box-brand-content__show_more a {
   font-size: 30px;
   color: #D7BD62;
   line-height: 46px;
 }
+
 .kadomi-perfumes-component__box-brand-content__show_more:hover {
   background-color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-brand-content__show_more:hover a {
-  color: #000;
+  color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-brand-img {
   min-width: 325px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-left: 1px solid rgba(215, 189, 98, 0.41);
 }
+
 .kadomi-perfumes-component__box-personal-results {
   background: url("../img/bg-brand.jpg") no-repeat;
   background-size: contain;
@@ -735,36 +773,35 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   margin: 0 auto;
   border: 0;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-@media only screen and (max-width: 900px) {
-  .kadomi-perfumes-component__box-personal-results {
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-  }
-}
-@media only screen and (max-width: 880px) {
-  .kadomi-perfumes-component__box-personal-results {
-    height: 100%;
-  }
-}
+
 .kadomi-perfumes-component__box-personal-results-content {
   font-size: 35px;
   line-height: 35px;
   padding: 33px 39px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .kadomi-perfumes-component__box-personal-results-content__text {
   padding-right: 4px;
 }
+
 .kadomi-perfumes-component__box-personal-results-content__text-title {
   font-size: 50px;
   line-height: 59px;
   font-weight: 700;
   margin-bottom: 13px;
 }
+
 .kadomi-perfumes-component__box-personal-results-content__show_more {
   width: 149px;
   height: 46px;
@@ -772,25 +809,36 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   margin: 37px 0 19px;
   text-align: center;
 }
+
 .kadomi-perfumes-component__box-personal-results-content__show_more a {
   font-size: 30px;
   color: #D7BD62;
   line-height: 46px;
 }
+
 .kadomi-perfumes-component__box-personal-results-content__show_more:hover {
   background-color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-personal-results-content__show_more:hover a {
-  color: #000;
+  color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-personal-results-img {
   min-width: 223px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-left: 1px solid rgba(215, 189, 98, 0.41);
   position: relative;
 }
+
 .kadomi-perfumes-component__box-personal-results-img__number {
   width: 39px;
   height: 40px;
@@ -804,30 +852,43 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   right: 12px;
   top: 18px;
 }
+
 .kadomi-perfumes-component__box-product-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .kadomi-perfumes-component__box-product-description-content {
   font-size: 30px;
   line-height: 31px;
   padding: 58px 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .kadomi-perfumes-component__box-product-description-content__text {
   padding-right: 4px;
 }
+
 .kadomi-perfumes-component__box-product-description-content__text h3 {
   font-weight: 700;
   margin-bottom: 30px;
   color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-product-description-content__text p {
   color: #fff;
   font-size: 30px;
   line-height: 30px;
   padding-bottom: 30px;
 }
+
 .kadomi-perfumes-component__box-product-description-content__show_more {
   width: 149px;
   height: 46px;
@@ -835,36 +896,43 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   margin: 37px 0 19px;
   text-align: center;
 }
+
 .kadomi-perfumes-component__box-product-description-content__show_more a {
   font-size: 30px;
   color: #D7BD62;
   line-height: 46px;
 }
+
 .kadomi-perfumes-component__box-product-description-content__show_more:hover {
   background-color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-product-description-content__show_more:hover a {
-  color: #000;
+  color: #D7BD62;
 }
+
 .kadomi-perfumes-component__box-product-description-img {
   max-width: 413px;
   margin: -17px 0 0;
-}
-@media only screen and (max-width: 880px) {
-  .kadomi-perfumes-component__box-product-description-img {
-    max-width: 413px;
-  }
 }
 
 /* Blocks styling */
 /* Page Templates */
 #questionnaire .page-questionnaire--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 75px 0 0;
   gap: 32px;
 }
+
 #questionnaire .questionnaire__button {
   background: url("../img/bg-button.png") no-repeat;
   background-size: cover;
@@ -875,9 +943,11 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   color: #fff;
   border: solid 1px transparent;
 }
+
 #questionnaire .questionnaire__button:hover {
   border: 1px solid rgba(215, 189, 98, 0.8);
 }
+
 #questionnaire .questionnaire__button-title {
   font-size: 48px;
   line-height: 100%;
@@ -885,6 +955,7 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   padding: 23px 0 9px;
   color: #fff;
 }
+
 #questionnaire .questionnaire__button-info {
   font-size: 27px;
   line-height: 27px;
@@ -894,42 +965,59 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 .personal-questionnaire .questions-wrapper .question-item {
   display: none;
 }
+
 .personal-questionnaire .questions-wrapper .question-item:first-child {
   display: block;
 }
+
 .personal-questionnaire-text {
   min-height: 79px;
 }
+
 .personal-questionnaire-text-read_more {
   margin-top: 35px;
   margin-bottom: 80px;
 }
+
 .personal-questionnaire-text-read_more a {
   font-size: 23px;
   line-height: 100%;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   font-weight: 900;
 }
+
 .personal-questionnaire-topic {
   color: #D7BD62;
   font-weight: 400;
 }
+
 .personal-questionnaire h1 {
   font-size: 45px;
   line-height: 46px;
   text-align: right;
   font-weight: 700;
 }
+
 .personal-questionnaire h2 {
   margin: 14px 0 0;
 }
+
 .personal-questionnaire .page-quiz--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 39px 0 0;
   gap: 32px;
 }
+
 .personal-questionnaire .main-questionnaire__button {
   background: url("../img/bg-button.png") no-repeat;
   background-size: contain;
@@ -942,57 +1030,59 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 .brand {
   margin: 2px 0 0;
 }
+
 .brand-text {
   min-height: 79px;
 }
+
 .brand-text-read_more {
   margin-top: 35px;
   margin-bottom: 80px;
 }
+
 .brand-text-read_more a {
   font-size: 23px;
   line-height: 100%;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   font-weight: 900;
 }
+
 .brand-topic {
   color: #D7BD62;
   font-weight: 400;
 }
+
 .brand h1 {
   font-size: 45px;
   line-height: 46px;
   text-align: right;
   font-weight: 700;
 }
+
 .brand h2 {
   margin: 14px 0 0;
 }
+
 .brand .page-quiz--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 39px 0 0;
   gap: 32px;
 }
-@media only screen and (max-width: 950px) {
-  .brand .page-quiz--inner {
-    margin: 39px 32px 0;
-  }
-}
+
 .brand .page-quiz--inner-brand {
   margin: 4px 0 0;
 }
-@media only screen and (max-width: 950px) {
-  .brand .page-quiz--inner-brand {
-    margin: 4px 32px 0;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .brand .page-quiz--inner-brand {
-    margin: 4px 15px 0;
-  }
-}
+
 .brand .main-questionnaire__button {
   background: url("../img/bg-button.png") no-repeat;
   background-size: contain;
@@ -1005,6 +1095,7 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 .scent-families .personal-questionnaire .page-quiz--inner {
   margin: 44px 0 0;
 }
+
 .scent-families .inputGroup {
   display: block;
   margin: 0;
@@ -1012,6 +1103,7 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .scent-families .inputGroup label {
   padding: 12px 30px;
   width: 100%;
@@ -1021,27 +1113,32 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   cursor: pointer;
   position: relative;
   z-index: 2;
+  -webkit-transition: color 200ms ease-in;
   transition: color 200ms ease-in;
   overflow: hidden;
   height: 100%;
 }
+
 .scent-families .inputGroup label:before {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+          transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   z-index: -1;
 }
+
 .scent-families .inputGroup label:after {
   width: 70px;
   height: 70px;
-  content: "";
+  content: '';
   border: 3px solid #fff;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -1052,41 +1149,53 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
   right: 123px;
   top: 82px;
   cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
+
 .scent-families .inputGroup input:checked ~ label {
   color: #fff;
 }
+
 .scent-families .inputGroup input:checked ~ label:before {
-  transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  -webkit-transform: translate(-50%, -50%) scale3d(56, 56, 1);
+          transform: translate(-50%, -50%) scale3d(56, 56, 1);
   opacity: 1;
 }
+
 .scent-families .inputGroup input:checked ~ label:after {
   background-color: #fff;
   border-color: #fff;
   background-image: url("../img/icons/btn-icon-v.svg");
   background-position: center;
 }
+
 .scent-families .inputGroup input {
   width: 70px;
   height: 70px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   z-index: 2;
   position: absolute;
   right: 30px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   cursor: pointer;
   visibility: hidden;
 }
+
 .scent-families .inputGroup .kadomi-perfumes-component__button-topic {
   position: relative;
   right: 194px;
   top: 81px;
 }
+
 .scent-families .inputGroup .kadomi-perfumes-component__button-topic-text {
   line-height: 100%;
 }
+
 .scent-families .inputGroup .kadomi-perfumes-component__button-topic-info {
   line-height: 40px;
   margin-top: -2px;
@@ -1099,52 +1208,59 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 .personal-results {
   margin: 2px 0 0;
 }
+
 .personal-results-text {
   min-height: 79px;
 }
+
 .personal-results-text-read_more {
   margin-top: 35px;
   margin-bottom: 80px;
 }
+
 .personal-results-text-read_more a {
   font-size: 23px;
   line-height: 100%;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   font-weight: 900;
 }
+
 .personal-results-topic {
   color: #D7BD62;
   font-weight: 400;
 }
+
 .personal-results h1 {
   font-size: 45px;
   line-height: 46px;
   text-align: right;
   font-weight: 700;
 }
+
 .personal-results h2 {
   margin: 14px 0 0;
 }
+
 .personal-results .page-quiz--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 39px 0 0;
   gap: 32px;
 }
+
 .personal-results .page-quiz--inner-personal-results {
   margin: 6px 0 0;
 }
-@media only screen and (max-width: 950px) {
-  .personal-results .page-quiz--inner-personal-results {
-    margin: 6px 32px 0;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .personal-results .page-quiz--inner-personal-results {
-    margin: 6px 15px 0;
-  }
-}
+
 .personal-results .main-questionnaire__button {
   background: url("../img/bg-button.png") no-repeat;
   background-size: contain;
@@ -1157,64 +1273,59 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 .product-description {
   margin: 2px 0 0;
 }
-@media only screen and (max-width: 950px) {
-  .product-description {
-    margin: 2px 32px 0;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .product-description {
-    margin: 2px 15px 0;
-  }
-}
+
 .product-description-text {
   min-height: 79px;
 }
+
 .product-description-text-read_more {
   margin-top: 35px;
   margin-bottom: 80px;
 }
+
 .product-description-text-read_more a {
   font-size: 23px;
   line-height: 100%;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   font-weight: 900;
 }
+
 .product-description-topic {
   color: #D7BD62;
   font-weight: 400;
 }
+
 .product-description h1 {
   font-size: 45px;
   line-height: 46px;
   text-align: right;
   font-weight: 700;
 }
+
 .product-description h2 {
   margin: 14px 0 0;
 }
+
 .product-description .page-quiz--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 39px auto;
   gap: 32px;
   max-width: 902px;
   background: rgba(155, 31, 59, 0.2);
   min-height: 969px;
 }
+
 .product-description .page-quiz--inner-personal-results {
   margin: 6px 0 0;
 }
-@media only screen and (max-width: 950px) {
-  .product-description .page-quiz--inner-personal-results {
-    margin: 6px 32px 0;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .product-description .page-quiz--inner-personal-results {
-    margin: 6px 15px 0;
-  }
-}
+
 .product-description .main-questionnaire__button {
   background: url("../img/bg-button.png") no-repeat;
   background-size: contain;
@@ -1225,9 +1336,15 @@ footer #footer-menu .menu-item .nav-link.active:after, footer #footer-menu .menu
 }
 
 .brand-name-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 24px;
-  min-height: auto;
 }
+/*# sourceMappingURL=main.css.map */

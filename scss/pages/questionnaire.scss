@@ -13,12 +13,16 @@
     .questionnaire{
         &__button{
             background:url("../img/bg-button.png") no-repeat;
-            background-size:contain;
-            width:630px;
+            background-size:cover;
+            width:100%;
+            max-width:630px;
             height:158px;
             margin: 0 auto;
-            border: 0;
             color:$white;
+            border:solid 1px transparent;
+            &:hover{
+                border: 1px solid rgba(215, 189, 98, 0.8);
+            }
             &-title{
                 font-size: 48px;
                 line-height: 100%;

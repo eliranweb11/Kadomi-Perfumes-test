@@ -35,16 +35,16 @@ $(document).ready(function(){
 
     //menu - slideout
     $('.slideout-menu-wrp ul li a').click(function () {
-        var question = $(this).parents('.menu-item').attr('data-category');
+        var category = $(this).parents('.menu-item').attr('data-category');
         var answer = $(this).attr('data-answer');
-        console.log('question = ' + question + ' answer = ' + answer);
+        console.log('category = ' + category + ' answer = ' + answer);
 
-        var nextQuestion = parseInt(question) + 1;
-        goToQuestion(nextQuestion);
+        var nextCategory = parseInt(category) + 1;
+        goToCategory(nextCategory);
     });
     $('.slideout-menu-wrp ul li a').click(function () {
-        var question = $(this).attr('data-category');
-        goToQuestion(question);
+        var category = $(this).attr('data-category');
+        goToCategory(category);
         $('.slideout-menu ul.slideout-menu-category').hide();
     });
     //arrow back
@@ -53,9 +53,9 @@ $(document).ready(function(){
         $('.menu-item').hide();
         
     });
-    function goToQuestion(question) {
+    function goToCategory(category) {
         $('.menu-item').hide();
-        $('.menu-item[data-category="' + question + '"]').show();
+        $('.menu-item[data-category="' + category + '"]').show();
     }
 
 });
